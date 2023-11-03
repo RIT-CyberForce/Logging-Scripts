@@ -151,20 +151,17 @@
         </mitre>
     </rule>
         <rule id="100017" level="0">
-      <if_group>syscheck</if_group>
       <field name="file">/root/.viminfo</field>
       <match>modified</match>
       <description>viminfo (vim history file) updated</description>
     </rule>
 
     <rule id="100018" level="0">
-      <if_group>syscheck</if_group>
       <match>/etc/resolv.conf</match>
       <description>resolv.conf modified, big whoop</description>
     </rule>
 
     <rule id="100019" level="10">
-      <if_group>syscheck</if_group>
       <match>modified|added|deleted</match>
       <field name="file">^/etc/cron.</field>
       <description>File changed inside Cron!</description>
@@ -172,13 +169,11 @@
 
 
     <rule id="100020" level="10">
-      <if_group>syscheck</if_group>
       <field name="file">/etc/pam</field>
       <description>PAM configuration modified!</description>
     </rule>
 
     <rule id="100021" level="9">
-      <if_group>syscheck</if_group>
       <field name="file">authorized_keys$</field>
       <match>modified</match>
       <description>authorized_keys updated, UHOH</description>
@@ -186,26 +181,22 @@
 
 <!-- read internal docs for more info if this isn't working as expected -->
     <rule id="100022" level="12">
-      <if_group>syscheck</if_group>
       <field name="changed_content">thug|THUG</field>
       <match>modified</match>
       <description>WORD "thug" HAS BEEN ADDED TO FILE</description>
     </rule>
 
     <rule id="100023" level="6">
-      <if_group>syscheck</if_group>
       <field name="file">^/bin | ^/usr/bin</field>
       <description>User-level binary file changed!</description>
     </rule>
 
     <rule id="100024" level="8">
-      <if_group>syscheck</if_group>
       <field name="file">^/sbin | ^/usr/sbin</field>
       <description>Superuser binary file changed!</description>
     </rule>
 
     <rule id="100025" level="6">
-      <if_group>syscheck</if_group>
       <field name="file">/etc/apt</field>
       <description>Apt configuration files updated</description>
     </rule>
