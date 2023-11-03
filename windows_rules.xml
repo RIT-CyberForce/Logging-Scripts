@@ -77,6 +77,11 @@
         <field name="win.eventdata.GrantedAccess" type="pcre2">(?i)0x1010</field>
         <description>Possible credential dumping using mimikatz</description>
     </rule>
+
+    <rule id="111010" level="8">
+        <field name="win.system.eventID">^4768$</field>
+        <options>no_full_log</options>
+        <description>Kerberos TGT requested. Possible AS-REP roasting attack. </description>
 </group>
 
 <!-- Commonly abused Windows binaries -->
