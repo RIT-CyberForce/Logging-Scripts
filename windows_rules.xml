@@ -82,6 +82,7 @@
         <field name="win.system.eventID">^4768$</field>
         <options>no_full_log</options>
         <description>Kerberos TGT requested. Possible AS-REP roasting attack. </description>
+    </rule>
 </group>
 
 <!-- Commonly abused Windows binaries -->
