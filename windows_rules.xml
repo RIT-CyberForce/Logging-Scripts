@@ -79,6 +79,7 @@
     </rule>
 
     <rule id="111010" level="8">
+        <if_sid>60103</if_sid>
         <field name="win.system.eventID">^4768$</field>
         <options>no_full_log</options>
         <description>Kerberos TGT requested. Possible AS-REP roasting attack. </description>
