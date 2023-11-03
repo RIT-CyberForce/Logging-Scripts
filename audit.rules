@@ -102,6 +102,8 @@
 ## KExec usage (all actions)
 -a always,exit -F arch=b64 -S kexec_load -k KEXEC
 -a always,exit -F arch=b32 -S sys_kexec_load -k KEXEC
+-a exit,always -F arch=b64 -F euid=0 -S execve -k  audit-wazuh-c
+-a exit,always -F arch=b32 -F euid=0 -S execve -k  audit-wazuh-c
 
 ## Special files
 -a always,exit -F arch=b32 -S mknod -S mknodat -k mknod
