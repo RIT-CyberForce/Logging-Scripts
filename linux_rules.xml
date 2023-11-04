@@ -142,7 +142,7 @@
     </rule>
     <!-- This rule detects files modified with PHP web shell signatures. -->
     <rule id="100016" level="15">
-        <if_sid>100501</if_sid>
+        <if_sid>100015</if_sid>
         <field name="changed_content" type="pcre2">(?i)passthru|exec|eval|shell_exec|assert|str_rot13|system|phpinfo|base64_decode|chmod|mkdir|fopen|fclose|readfile|show_source|proc_open|pcntl_exec|execute|WScript.Shell|WScript.Network|FileSystemObject|Adodb.stream</field>
         <description>[File Modification]: File $(file) contains a web shell</description>
         <mitre>
@@ -199,6 +199,16 @@
     <rule id="100025" level="6">
       <field name="file">/etc/apt</field>
       <description>Apt configuration files updated</description>
+    </rule>
+    
+    <rule id="100026" level="8">
+      <field name="file">/home/ubuntu</field>
+      <description>User "ubuntu" home directory updated</description>
+    </rule>
+    
+    <rule id="100027" level="8">
+      <field name="file">/root</field>
+      <description>User "root" home directory updated</description>
     </rule>
 </group>
 
